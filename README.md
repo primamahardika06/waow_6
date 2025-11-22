@@ -35,8 +35,12 @@ Pastikan Anda telah menginstall:
 ### 1. Clone Repository
 
 ```bash
+# clone repository
 git clone https://github.com/primamahardika06/waow_6.git
-cd repository-name
+# change directory
+cd waow_6
+# open code pada text editor
+code .
 ```
 
 ### 2. Setup file .env
