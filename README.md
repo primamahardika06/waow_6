@@ -73,22 +73,5 @@ MYSQL_DATABASE = 'shop'
 ```bash
 python app.py
 ```
-## 📄Struktur File
-project/
-├── app.py                 # Main application file
-├── config.py             # Configuration file
-├── routes/               # Blueprint routes
-│   ├── customer_routes.py
-│   ├── product_routes.py
-│   └── transaction_routes.py
-├── templates/            # HTML templates
-│   ├── base.html
-│   ├── index.html
-│   ├── login.html
-│   ├── register.html
-│   ├── customers.html
-│   ├── products.html
-│   ├── transactions.html
-│   └── reports.html
-└── README.md
+
 
