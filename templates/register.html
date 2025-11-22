@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <title>Register</title>
+  </head>
+  <body class="body_login">
+    <div class="login">
+      <div class="login_detail">
+        <!-- Fixed: Added method and action to form -->
+        <form
+          class="tabel_login"
+          method="POST"
+          action="{{ url_for('register') }}"
+        >
+          <div class="text_login">
+            <h3>Welcome to Prima Shop!</h3>
+            <p>Create Your Account</p>
+          </div>
+
+          <!-- Added name field -->
+          <label>Full Name</label>
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter Your Full Name"
+            required
+          />
+
+          <label>Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter Your Email"
+            required
+          />
+
+          <label>Password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Your Password"
+            required
+          />
+
+          <div class="button_login">
+            <button type="submit">Register</button>
+          </div>
+
+          <!-- Added login link -->
+          <div class="register-link">
+            <p>
+              Already have an account?
+              <a href="{{ url_for('login') }}">Login here</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

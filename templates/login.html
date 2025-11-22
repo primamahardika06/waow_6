@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <title>Login</title>
+  </head>
+  <body class="body_login">
+    <div class="login">
+      <div class="login_detail">
+        <form
+          class="tabel_login"
+          method="POST"
+          action="{{ url_for('login') }}"
+           onsubmit="return handleLogin(event)"
+        >
+          <div class="text_login" id="textLogin">
+            <h3 id="welcomeText">Welcome to Prima Shop!</h3>
+            <p id="subtitleText">Please Login Your Account</p>
+          </div>
+
+          <!-- Error message container -->
+          <div
+            id="errorMessage"
+            class="error-message"
+            style="display: none"
+          ></div>
+
+          <label>Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter Your Email"
+            required
+          />
+
+          <label>Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Your Password"
+            required
+          />
+
+          <!-- <a href="/">
+            <p style="color: blue; margin: 10px 0">Forget Password?</p>
+          </a> -->
+
+          <div class="button_login">
+            <button type="submit">Sign In</button>
+
+            <div class="register-link">
+              <p>
+                Don't Have an Account?
+                <a href="{{ url_for('register') }}">Please Register</a>
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
